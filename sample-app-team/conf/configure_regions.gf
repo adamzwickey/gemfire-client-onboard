@@ -1,15 +1,3 @@
-# run this only once after having started your grid:  
-# gfsh>run --file=configure_regions.gf
-
-#cache loaders and asynch event listener
-deploy --jar=lib/gemfire-server-0.0.1-SNAPSHOT.jar
-
-#functions for cache loader and asynch event listener
-deploy --jar=lib/gemfire-functions-0.0.1-SNAPSHOT.jar
-
-# PKCS security
-deploy --jar=lib/SingleServer-1.0-SNAPSHOT.jar
-
 #defines which class will be invoked asynchronously for Payment writing
 create async-event-queue --listener=com.tmo.payments.server.cacheevents.PaymentDbSynchronizer --id=1
 
