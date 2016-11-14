@@ -4,7 +4,11 @@ wget -O "pivotal-gemfire.deb" --post-data="" --header="Authorization: Token ${PI
 sudo dpkg -i pivotal-gemfire.deb
 
 # Loop through Client teams
-
+for team in ./*;
+  do
+     [ -d $team ] && cd "$team"
+     echo Entering into $f
+  done;
 # Add Security
 
 # Add Jars
