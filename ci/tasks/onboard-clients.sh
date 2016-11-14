@@ -11,12 +11,16 @@ for team in ./*;
        continue
      fi
 
-     echo Entering into $team
-     
+     echo 'Entering into $team'
+     # Add Security
+
+     # Add Jars
+     for jar in ./jars/*.jar
+       do
+         #Execute GFSH Command to load jars
+         echo "Loading Jar [$jar] into Gemfire"
+       done;
+
+     # Configure Regions
+
   done;
-
-# Add Security
-
-# Add Jars
-
-# Configure Regions
